@@ -1,3 +1,12 @@
+/* 
+To do after initial completion:
+- make the visuals nicer
+- add animations and fading in/out for various things
+- make it work for mobile and nonmobile devices with media queries 
+
+*/
+
+
 import { useState } from "react";
 import HangmanDrawing from "./components/HangmanDrawing/HangmanDrawing";
 import Keyboard from "./components/Keyboard/Keyboard";
