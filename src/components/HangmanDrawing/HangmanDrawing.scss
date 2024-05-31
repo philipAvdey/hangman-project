@@ -1,0 +1,32 @@
+.app__drawing{
+    position: relative;
+}
+
+.app__drawing_bottom{
+    height: 10px;
+    width: 250px;
+    background: black;
+}
+.app__drawing_vertical-section{
+    height: 400px;
+    width: 10px;
+    background: black;
+    margin-left: 120px;
+}
+
+.app__drawing_overhang{
+    height: 10px;
+    width: 200px;
+    background: black;
+    margin-left: 120px;
+}
+
+.app__drawing_noose-holder{
+    height: 50px;
+    width: 10px;
+    background: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
