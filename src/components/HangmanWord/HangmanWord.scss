@@ -1,0 +1,21 @@
+.app__word{
+    display: flex;
+    gap: 0.25em;
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.app__word_letter{
+    border-bottom: .1em solid black;
+}
+
+.app__word_letter_visible{
+    visibility: visible;
+
+}
+.app__word_letter_invisible{
+    visibility: hidden;
+    
+}
