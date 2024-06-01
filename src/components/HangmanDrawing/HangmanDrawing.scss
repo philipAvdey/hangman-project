@@ -41,3 +41,55 @@
     top: 45px;
 
 }
+
+.app__drawing_body{
+    width: 10px;
+    height: 100px;
+    background: black;
+    position: absolute;
+    left: 310px;
+    top: 116px;
+}
+
+.app__drawing_right-arm{
+    width: 100px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    left: 310px;
+    top: 126px;
+    rotate: 30deg;
+    transform-origin: left bottom;
+}
+
+.app__drawing_left-arm{
+    width: 100px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    left: 216px;
+    top: 126px;
+    rotate: -30deg;
+    transform-origin: right top;
+}
+.app__drawing_left-leg{
+    width: 100px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    left: 210px;
+    top: 210px;
+    rotate: -60deg;
+    transform-origin: right top;
+}
+
+.app__drawing_right-leg{
+    width: 100px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    left: 310px;
+    top: 205px;
+    rotate: 60deg;
+    transform-origin: left bottom;
+}
