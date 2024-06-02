@@ -1,0 +1,34 @@
+.app__keyboard{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: 0.5rem;
+}
+
+.app__keyboard_key{
+    width: 100%;
+    text-transform: uppercase;
+    border: 3px solid black;
+    aspect-ratio: 1 / 1;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    background: #929496;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover:not(:disabled), &:focus:not(:disabled){
+        background-color: lightblue;
+    }
+
+    
+}
+.active{
+    background-color: rgb(80, 137, 224);
+    color: white;
+}
+
+.inactive{
+    opacity: .3;
+    color: black;
+
+}
+

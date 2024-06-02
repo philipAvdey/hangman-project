@@ -1,11 +1,15 @@
 import "./HangmanWord.scss";
 
-const word = "test";
-const guessedLetters = [""];
-const HangmanWord = () => {
+type HangmanWordProps = {
+  guessedLetters: string[]
+  wordToGuess: string
+}
+
+
+const HangmanWord = ({ guessedLetters, wordToGuess } : HangmanWordProps) => {
   return (
     <div className="app__word">
-      {word.split("").map((letter, index) => (
+      {wordToGuess.split("").map((letter, index) => (
         <span key={`${letter}-${index}`} className={`app__word_letter`}>
           <span
             className={`app__word_letter_${

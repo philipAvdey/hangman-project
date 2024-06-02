@@ -6,12 +6,10 @@ To do after initial completion:
 
 */
 
-
 import { useState } from "react";
 import HangmanDrawing from "./components/HangmanDrawing/HangmanDrawing";
 import Keyboard from "./components/Keyboard/Keyboard";
 import HangmanWord from "./components/HangmanWord/HangmanWord";
-
 
 import words from "./wordsList.json";
 import "./App.scss";
@@ -23,12 +21,18 @@ function App() {
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
+  const incorrectLetters = guessedLetters.filter(
+    (letter) => !wordToGuess.includes(letter)
+  );
+
   return (
     <div className="app">
       <div className="app__lose-win">Lose Win</div>
-      <HangmanDrawing />
-      <HangmanWord />
-      <Keyboard />
+      <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
+      <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess}/>
+      <div className="app__keyboard">
+        <Keyboard />
+      </div>
     </div>
   );
 }
