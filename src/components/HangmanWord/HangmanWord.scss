@@ -5,6 +5,7 @@
     font-weight: bold;
     text-transform: uppercase;
     font-family: monospace;
+    margin-bottom: 25px;
 }
 
 .app__word_letter{
@@ -21,7 +22,7 @@
 }
 
 .red{
-    color: red;
+    color: var(--incorrect-color);
 }
 
 .black{

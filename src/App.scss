@@ -9,11 +9,62 @@
     align-items: center;
 }
 
+.app__lose-win_congrats-button{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
 .app__lose-win{
     margin: 0;
-    padding: 0;
+    padding-top: 25px;
     font-size: 2rem;
     text-align: 'center';
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    align-items: center;
+
+    button{
+        padding: 10px 25px;
+        border-radius: 15px;
+        border: 2px solid transparent;
+        background-color: var(--secondary-color);
+        color: white;
+        font-family: var(--main-font);
+
+        &:hover{
+            box-shadow: 0 0 15px var(--lightGray-color) 
+        }
+        &:active{
+             background-color: var(--secondary-colorDarker);
+
+        }
+    }
+
+}
+
+.app__lose-win_txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.app__lose-win_txt_header{
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 0;
+
+}
+.app__lose-win_txt_footer{
+    padding-top: 0;
+    font-size: 2rem;
+    color: var(--darkGray-color);
+    letter-spacing: 0.5px;
+
 }
 
 .app__keyboard{

@@ -4,10 +4,12 @@
 :root {
   --main-font: "Inter", sans-serif;
   --primary-color: #91C8E4;
-  --secondary-color: #4964ed;
+  --secondary-color: #6b82f6;
+  --secondary-colorDarker: #43529c;
   --bg-color: #F6F4EB; 
-  --incorrect-color: #FA7070;
+  --incorrect-color: #f84f4f;
   --lightGray-color: #D3D6DA;
+  --darkGray-color: #a6a7a9;
 
 }
 

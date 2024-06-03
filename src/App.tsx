@@ -79,9 +79,35 @@ function App() {
   return (
     <div className="app">
       <div className="app__lose-win">
-        { (!isWinner && !isLoser) && "Type or click your guesses!" }
-        {isWinner && "Winner!"}
-        {isLoser && "Loser!"}
+        {!isWinner && !isLoser && (
+          <div className="app__lose-win_txt">
+            <p className="app__lose-win_txt_header">
+              Type in or click your guesses!
+            </p>
+            <p className="app__lose-win_txt_footer">
+              You can hit Enter if you want a new word.
+            </p>
+          </div>
+        )}
+        <div className="app__lose-win_congrats-button">
+          {isWinner && <p className="app__lose-win_txt_header">Great job!</p>}
+          {isLoser && <p className="app__lose-win_txt_header">Loser!</p>}
+          {(isWinner || isLoser) && (
+            <button
+              onClick={() => {
+                setGuessedLetters([]);
+                setWordToGuess(getWord());
+              }}
+            >
+              Play Again
+            </button>
+          )}
+        </div>
+        {(isWinner || isLoser) && (
+          <p className="app__lose-win_txt_footer invisible spacer">
+            You can hit Enter if you want a new word.
+          </p>
+        )}
       </div>
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord
