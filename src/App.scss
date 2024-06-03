@@ -1,3 +1,5 @@
+
+
 .app{
     max-width: 800px;
     display: flex;
@@ -8,10 +10,17 @@
 }
 
 .app__lose-win{
+    margin: 0;
+    padding: 0;
     font-size: 2rem;
     text-align: 'center';
 }
 
 .app__keyboard{
     align-self: stretch;
+
+}
+
+.invisible{
+    visibility: hidden;
 }

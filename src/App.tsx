@@ -14,7 +14,7 @@ import HangmanWord from "./components/HangmanWord/HangmanWord";
 import words from "./wordsList.json";
 import "./App.scss";
 
-const getWord = () => words[Math.floor(Math.random() * words.length)]
+const getWord = () => words[Math.floor(Math.random() * words.length)];
 
 function App() {
   const [wordToGuess, setWordToGuess] = useState(getWord);
@@ -62,7 +62,7 @@ function App() {
     const handler = (e: KeyboardEvent) => {
       const key = e.key;
 
-      if (key !== "Enter" ) {
+      if (key !== "Enter") {
         return;
       } else {
         e.preventDefault();
@@ -79,8 +79,9 @@ function App() {
   return (
     <div className="app">
       <div className="app__lose-win">
-        {isWinner && "Winner! Refresh to try again"}
-        {isLoser && "Loser! idiot."}
+        { (!isWinner && !isLoser) && "Type or click your guesses!" }
+        {isWinner && "Winner!"}
+        {isLoser && "Loser!"}
       </div>
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord

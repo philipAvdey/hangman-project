@@ -1,29 +1,42 @@
 .app__keyboard{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
-    gap: 0.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    // gap: 0.5rem;
+    
 }
 
 .app__keyboard_key{
+    flex: 0 0 85px;
     width: 100%;
     text-transform: uppercase;
-    border: 3px solid black;
+    border: 0;
+    border-radius: 15%;
     aspect-ratio: 1 / 1;
     font-size: 2.5rem;
     padding: 0.5rem;
-    background: #929496;
+    margin: 5px;
+    background: var(--lightGray-color);
     font-weight: bold;
+    font-family: var(--main-font);
     cursor: pointer;
 
-    &:hover:not(:disabled), &:focus:not(:disabled){
-        background-color: lightblue;
-    }
 
-    
+    &:hover:not(:disabled), &:focus:not(:disabled){
+        background-color: var(--primary-color);
+    }
 }
+
+
 .active{
-    background-color: rgb(80, 137, 224);
+    background-color: var(--secondary-color);
     color: white;
+    
 }
 
 .inactive{
