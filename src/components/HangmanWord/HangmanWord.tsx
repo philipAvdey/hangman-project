@@ -1,4 +1,5 @@
 import "./HangmanWord.scss";
+import { motion } from 'framer-motion';
 
 type HangmanWordProps = {
   guessedLetters: string[];
@@ -15,6 +16,10 @@ const HangmanWord = ({
     <div className="app__word">
       {wordToGuess.split("").map((letter, index) => (
         <span key={`${letter}-${index}`} className={`app__word_letter`}>
+          <motion.div
+            animate={{ opacity: [0,1] }}
+            transition={{ duration: 1 }}
+          >
           <span
             className={`app__word_letter_${
               guessedLetters.includes(letter) || reveal
@@ -28,6 +33,7 @@ const HangmanWord = ({
           >
             {letter}
           </span>
+          </motion.div>
         </span>
       ))}
     </div>

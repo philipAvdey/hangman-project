@@ -14,13 +14,11 @@
 
 .app__keyboard_row{
     display: flex;
-    flex-direction: row;
     gap: 0.2rem;
-    flex: 0 0 10px;
+    flex: 0 0 20px;
     justify-content: center;
-    align-items: center;
-
 }
+
 
 .app__keyboard_key{
     flex: 0 0 75px;
@@ -38,9 +36,6 @@
     cursor: pointer;
 
 
-    &:hover:not(:disabled), &:focus:not(:disabled){
-        background-color: var(--primary-color);
-    }
 }
 
 
